@@ -1,15 +1,14 @@
-public class Cat{
-
-    private String name;
+public class Cat extends Pet{
 
     public Cat(String name){
-        this.name = name;
+        super(name);
     }
 
     public String getName(){
         return this.name;
     }
 
+    @Override   
     public void makeSound(){
         System.out.println(this.getName() + " says: Hello!, I am Cat");
     }

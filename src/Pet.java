@@ -62,4 +62,8 @@ public class Pet {
         System.out.println("Cleanliness Level: " + this.cleanliness);
         System.out.println("Happiness Level: " + this.happiness);
     }
+
+    public void makeSound() {
+        System.out.println(this.name + " says: Hello!");
+    }   
 }
