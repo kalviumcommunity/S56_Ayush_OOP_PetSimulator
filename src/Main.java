@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        Pet.totalPets = 0;
+        Pet.setTotalPets(0);
 
         // Dynamic Allocation of Memory for Array of Objects
         Pet[] pets = new Pet[3];
@@ -22,7 +22,7 @@ public class Main {
             pet.makeSound();
         }
 
-        System.out.println(Pet.totalPets);
+        System.out.println(Pet.getTotalPets());
 
         // Deallocation is done automatically in Java by the process of Garbage Collection. 
         
