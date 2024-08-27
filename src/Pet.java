@@ -5,7 +5,7 @@ public class Pet {
     int happiness;
     String name;
 
-    static int totalPets;
+    static private int totalPets;
 
     public Pet(String name) {
         this.hunger = 20;
@@ -68,5 +68,13 @@ public class Pet {
 
     public void makeSound() {
         System.out.println(this.name + " says: Hello!");
-    }   
+    }  
+    
+    public static int getTotalPets() {
+        return totalPets;
+    }
+
+    public static void setTotalPets(int totalPets) {
+        Pet.totalPets = totalPets;
+    }
 }
