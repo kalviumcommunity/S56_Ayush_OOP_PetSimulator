@@ -5,12 +5,15 @@ public class Pet {
     int happiness;
     String name;
 
+    static int totalPets;
+
     public Pet(String name) {
         this.hunger = 20;
         this.energy = 20;
         this.cleanliness = 20;
         this.happiness = 20;
         this.name = name;
+        totalPets++;
     }
 
     public void feed() {
