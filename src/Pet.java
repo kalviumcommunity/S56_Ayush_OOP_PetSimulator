@@ -18,9 +18,9 @@ public class Pet {
         totalPets++;
     }
 
-    public void feed() {
+    public void feed(FoodItem food) {
         if (this.hunger > 0) {
-            this.hunger -= 4;
+            this.hunger -= food.getNutritionValue();
             this.happiness += 1;
             this.energy += 1;
             System.out.println(this.name + " has been fed. Hunger level: " + this.hunger);
