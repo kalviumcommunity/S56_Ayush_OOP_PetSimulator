@@ -26,5 +26,9 @@ public class Main {
 
         // Deallocation is done automatically in Java by the process of Garbage Collection. 
         
+        System.out.println(Tuffy.getHunger());
+        Tuffy.feed(new FoodItem("Fish", 5));
+        System.out.println(Tuffy.getHunger());
+
     }
 }

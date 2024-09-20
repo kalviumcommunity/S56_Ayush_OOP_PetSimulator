@@ -1,9 +1,11 @@
 public class Pet {
-    int hunger;
-    int energy;
-    int cleanliness;
-    int happiness;
-    String name;
+    
+    // Encapsulated Data Members 
+    private int hunger;
+    private int energy;
+    private int cleanliness;
+    private int happiness;
+    private String name;
 
     static private int totalPets;
 
@@ -16,9 +18,9 @@ public class Pet {
         totalPets++;
     }
 
-    public void feed() {
+    public void feed(FoodItem food) {
         if (this.hunger > 0) {
-            this.hunger -= 4;
+            this.hunger -= food.getNutritionValue();
             this.happiness += 1;
             this.energy += 1;
             System.out.println(this.name + " has been fed. Hunger level: " + this.hunger);
@@ -76,5 +78,29 @@ public class Pet {
 
     public static void setTotalPets(int totalPets) {
         Pet.totalPets = totalPets;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHunger() {
+        return this.hunger;
+    }
+
+    public int getEnergy() {
+        return this.energy;
+    }
+
+    public int getCleanliness() {
+        return this.cleanliness;
+    }
+
+    public int getHappiness() {
+        return this.happiness;
     }
 }
