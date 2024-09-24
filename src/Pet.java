@@ -1,4 +1,4 @@
-public class Pet {
+public abstract class Pet {
     
     // Encapsulated Data Members 
     private int hunger;
@@ -66,11 +66,7 @@ public class Pet {
         System.out.println("Energy Level: " + this.energy);
         System.out.println("Cleanliness Level: " + this.cleanliness);
         System.out.println("Happiness Level: " + this.happiness);
-    }
-
-    public void makeSound() {
-        System.out.println(this.name + " says: Hello!");
-    }  
+    } 
     
     public static int getTotalPets() {
         return totalPets;
@@ -103,4 +99,7 @@ public class Pet {
     public int getHappiness() {
         return this.happiness;
     }
+
+    // abstract class defined which will be implemented by the subclasses
+    public abstract void makeSound();
 }
