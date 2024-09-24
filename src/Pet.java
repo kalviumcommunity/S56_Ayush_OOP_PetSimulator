@@ -18,6 +18,15 @@ public abstract class Pet {
         totalPets++;
     }
 
+    public Pet(){
+        this.name = "Unknown";
+        this.hunger = 20;
+        this.energy = 20;
+        this.cleanliness = 20;
+        this.happiness = 20;
+        totalPets++;
+    }
+
     public void feed(FoodItem food) {
         if (this.hunger > 0) {
             this.hunger -= food.getNutritionValue();
@@ -102,4 +111,13 @@ public abstract class Pet {
 
     // abstract class defined which will be implemented by the subclasses
     public abstract void makeSound();
+
+    // @Override
+    // protected void finalize() throws Throwable {
+    //     try {
+    //         totalPets--;
+    //     } finally {
+    //         super.finalize();
+    //     }
+    // }
 }
