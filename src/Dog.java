@@ -4,7 +4,6 @@ public class Dog extends Pet{
         super(name);
     }
 
-    // Method Overriding : Runtime Polymorphism
     @Override
     public void makeSound() {
         System.out.println(this.getName() + " says: Hello!, I am Dog!");
