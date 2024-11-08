@@ -1,3 +1,5 @@
+import java.lang.reflect.Constructor;
+
 public abstract class Pet {
     
     // Encapsulated Data Members 
@@ -9,6 +11,8 @@ public abstract class Pet {
 
     static private int totalPets;
 
+    // Constructor Overloading
+    // 1st Constructor - Parameterized Constructor
     public Pet(String name) {
         this.hunger = 20;
         this.energy = 20;
@@ -18,6 +22,7 @@ public abstract class Pet {
         totalPets++;
     }
 
+    // 2nd Constructor - Default Constructor
     public Pet(){
         this.name = "Unknown";
         this.hunger = 20;
@@ -109,7 +114,7 @@ public abstract class Pet {
         return this.happiness;
     }
 
-    // abstract class defined which will be implemented by the subclasses
+    // abstract method 
     public abstract void makeSound();
 
     // @Override
