@@ -1,3 +1,5 @@
+// Single Inheritance:   Base Class is Pet and Derived Class is Dog
+
 public class Dog extends Pet{
 
     public Dog(String name) {
