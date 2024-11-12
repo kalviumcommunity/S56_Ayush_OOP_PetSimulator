@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        Pet.setTotalPets(0);
+        PetManager petManager = new PetManager();
+        petManager.setTotalPets(0);
 
         Pet[] pets = new Pet[3];
 
@@ -18,10 +19,11 @@ public class Main {
             pet.makeSound();
         }
 
-        System.out.println(Pet.getTotalPets());        
+        System.out.println(petManager.getTotalPets());        
         System.out.println(Tuffy.getHunger());
+        
         Tuffy.feed(new FoodItem("Fish", 5));
-        System.out.println(Tuffy.getHunger());
+        System.out.println(Tuffy.getHunger());       
 
     }
 }

@@ -9,15 +9,13 @@ public abstract class Pet {
     private int happiness;
     private String name;
 
-    static private int totalPets;
-
     public Pet(String name) {
         this.hunger = 20;
         this.energy = 20;
         this.cleanliness = 20;
         this.happiness = 20;
         this.name = name;
-        totalPets++;
+        PetManager.addPet();
     }
 
     public Pet(){
@@ -26,7 +24,7 @@ public abstract class Pet {
         this.energy = 20;
         this.cleanliness = 20;
         this.happiness = 20;
-        totalPets++;
+        PetManager.addPet();
     }
 
     public void feed(FoodItem food) {
@@ -78,14 +76,6 @@ public abstract class Pet {
         System.out.println("Cleanliness Level: " + this.cleanliness);
         System.out.println("Happiness Level: " + this.happiness);
     } 
-    
-    public static int getTotalPets() {
-        return totalPets;
-    }
-
-    public static void setTotalPets(int totalPets) {
-        Pet.totalPets = totalPets;
-    }
 
     public String getName() {
         return this.name;
@@ -117,7 +107,7 @@ public abstract class Pet {
     // @Override
     // protected void finalize() throws Throwable {
     //     try {
-    //         totalPets--;
+    //         PetManager.removePet();
     //     } finally {
     //         super.finalize();
     //     }
