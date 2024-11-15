@@ -3,7 +3,8 @@ public class Main {
 
         PetManager petManager = new PetManager();
         petManager.setTotalPets(0);
-
+        
+        // Pets array depends on Abstract class Pet rather than concreate class Dog and Cat.
         Pet[] pets = new Pet[3];
 
         Dog Tuffy = new Dog("Tuffy");
@@ -22,6 +23,7 @@ public class Main {
         System.out.println(petManager.getTotalPets());        
         System.out.println(Tuffy.getHunger());
         
+        // Pet class depends on FoodItem class 
         Tuffy.feed(new FoodItem("Fish", 5));
         System.out.println(Tuffy.getHunger());       
 
