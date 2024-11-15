@@ -1,6 +1,5 @@
 import java.lang.reflect.Constructor;
-
-// Common abstract class : Open and Closed Principle applied. 
+ 
 public abstract class Pet {
     
     private int hunger;
